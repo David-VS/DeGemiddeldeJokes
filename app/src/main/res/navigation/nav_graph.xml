@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jokelistFragment">
+    <fragment
+        android:id="@+id/jokelistFragment"
+        android:name="be.ehb.debeterejokes.fragments.JokelistFragment"
+        android:label="@string/action_settings" >
+        <action
+            android:id="@+id/action_jokelistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_jokelistFragment_to_newJokeFragment"
+            app:destination="@id/newJokeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="be.ehb.debeterejokes.fragments.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/newJokeFragment"
+        android:name="be.ehb.debeterejokes.fragments.NewJokeFragment"
+        android:label="fragment_new_joke"
+        tools:layout="@layout/fragment_new_joke" />
+</navigation>
